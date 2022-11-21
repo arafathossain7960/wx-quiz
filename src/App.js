@@ -1,13 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import NotFound from './Components/NotFound/NotFound';
+import Main from './Layout/Main';
 function App() {
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element:<Main />
+    },
+    {
+      path:'*',
+      element:<NotFound />
+
+    }
+  ])
   return (
-    <div className="">
-   <Navbar></Navbar>
-     
-    </div>
+    <>
+      
+    <RouterProvider router={router} />
+
+      
+    </>
   );
 }
 
