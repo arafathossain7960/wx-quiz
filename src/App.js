@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="">
-      <h1>Welcome to Assignment 9</h1>
-      <p>this is with tail wind </p>
+   <Navbar></Navbar>
      
     </div>
   );
