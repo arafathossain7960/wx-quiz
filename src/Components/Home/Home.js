@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Banner from '../Banner/Banner';
 import QuizList from '../QuizList/QuizList';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     console.log(allQuiz)
     return (
         <div>
+            <Banner></Banner>
            {
             
             allQuiz.map(quiz => <QuizList

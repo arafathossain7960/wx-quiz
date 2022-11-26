@@ -1,0 +1,8 @@
+.banner{
+    background-image: url('../../img/WX-banner.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    background-image: linear-gradient(lightgray, gray);
+}
