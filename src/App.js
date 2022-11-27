@@ -1,6 +1,7 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Blog from './Components/Blog/Blog';
+import Chart from './Components/Chart/Chart';
 import DisplayQuiz from './Components/DisplayQuiz/DisplayQuiz';
 import Home from './Components/Home/Home';
 import NotFound from './Components/NotFound/NotFound';
@@ -28,14 +29,21 @@ function App() {
         path:'/blog',
         element:<Blog />
       },
+      {
+        path:'/chart',
+        element:<Chart />,
+        loader:()=>fetch('https://openapi.programming-hero.com/api/quiz')
+      },
+       {
+        path:'*',
+        element:<NotFound />
+  
+      },
+     
     ]
     },
    
-    {
-      path:'*',
-      element:<NotFound />
-
-    }
+   
   ])
   return (
     <>

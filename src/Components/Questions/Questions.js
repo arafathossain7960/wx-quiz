@@ -3,6 +3,7 @@ import './Questions.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 import Options from '../Options/Options';
+import Toast from '../Toast/Toast';
 
 const Questions = ({MainQuestion, setRightAnswer,setWrongAnswer,wrongAnswer,rightAnswer}) => {
     const [answer, setAnswer]=useState('');
@@ -19,11 +20,13 @@ const Questions = ({MainQuestion, setRightAnswer,setWrongAnswer,wrongAnswer,righ
         const value = e.target.value;
         if(value===correctAnswer){
             const rightAnswerCount = rightAnswer + 1;
-        return setRightAnswer(rightAnswerCount);
+         setRightAnswer(rightAnswerCount);
+           alert('your answer is correct.')
         
         }else{
             const wrongAnswerCount = wrongAnswer + 1;
-           return setWrongAnswer(wrongAnswerCount) 
+            alert(' Your answer is wrong')
+          setWrongAnswer(wrongAnswerCount) 
             
         }
         
@@ -36,7 +39,7 @@ const Questions = ({MainQuestion, setRightAnswer,setWrongAnswer,wrongAnswer,righ
 
 
            <div><h1>{answer}</h1></div>
-            <h1> {question} <button value='correctAnswer' onClick={currentAnswerHandler}><FontAwesomeIcon icon={faMapPin} /></button></h1>
+            <h1> {question} <button className='tooltip-visible' value='correctAnswer' onClick={currentAnswerHandler}><FontAwesomeIcon icon={faMapPin} /></button></h1>
            
            {
             options.map(option => <Options

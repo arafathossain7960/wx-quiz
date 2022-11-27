@@ -9,12 +9,12 @@ const DisplayQuiz = () => {
 
 
     
-    console.log(quizDetails.questions
-        )
+    console.log(quizDetails)
+        
         const questions = quizDetails.questions;
     return (
         <div>
-            <h4>This is  a quiz list details page </h4>
+            <h4> Quiz name : {quizDetails.name} </h4>
             <h1>Right answer : {rightAnswer}</h1>
             <h1>Wrong answer : {wrongAnswer}</h1>
             {
