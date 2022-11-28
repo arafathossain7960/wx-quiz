@@ -7,7 +7,7 @@ const Chart = () => {
     return (
         <ResponsiveContainer width='100%' height='100%'>
         <div className='text-center  my-16'>
-         <h3>This is a Rechart</h3>
+         <h3 className='my-4 text-3xl text-blue-400'>This is about quiz chart</h3>
          <LineChart width={600} height={300} data={data}>
             <Line type="monotone" dataKey="total" stroke="blue" />
             <CartesianGrid stroke="#ccc" />

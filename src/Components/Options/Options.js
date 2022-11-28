@@ -4,7 +4,7 @@ const Options = ({option, correctAnswerResultHandler  }) => {
     return (
         <div>
         
-            <input className='w-100' onClick={correctAnswerResultHandler}value={option} />
+            <input className='mb-2 text-center p-2 rounded bg-blue-100 hover:bg-white hover:text-blue-900' onClick={correctAnswerResultHandler}value={option} />
         </div>
     );
 };

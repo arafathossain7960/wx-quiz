@@ -13,7 +13,7 @@ const Questions = ({MainQuestion, setRightAnswer,setWrongAnswer,wrongAnswer,righ
 
     const currentAnswerHandler=()=>{
 
-        setAnswer(correctAnswer)
+        setAnswer(`Correct answer: ${correctAnswer}` )
     }
     
     const correctAnswerResultHandler =(e)=>{
@@ -34,13 +34,11 @@ const Questions = ({MainQuestion, setRightAnswer,setWrongAnswer,wrongAnswer,righ
    
     
     return (
-        <div className='border-2 border-red-400 questionsed '>
-           
+        <div className='bg-gray-100 mx-16 my-6 py-6 px-2 shadow-lg shadow-gray-200 '>
 
-
-           <div><h1>{answer}</h1></div>
-            <h1> {question} <button className='tooltip-visible' value='correctAnswer' onClick={currentAnswerHandler}><FontAwesomeIcon icon={faMapPin} /></button></h1>
-           
+         
+            <h1 className='text-xl my-4'> {question} <button className='tooltip-visible text-blue-900 text-xl ml-6' value='correctAnswer' onClick={currentAnswerHandler}><FontAwesomeIcon icon={faMapPin} /></button></h1>
+            <div> <h1 className='text-blue-500 my-2'> {answer}</h1></div>
            {
             options.map(option => <Options
             option={option}
