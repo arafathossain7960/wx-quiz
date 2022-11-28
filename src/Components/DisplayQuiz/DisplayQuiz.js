@@ -14,7 +14,7 @@ const DisplayQuiz = () => {
         const questions = quizDetails.questions;
        
     return (
-        <div className='displayQuiz text-center'>
+        <div className=' text-center'>
             <h4 className='text-3xl text-blue-400 my-4 bolded '> Quiz name : {quizDetails.name} </h4>
             <h1 className='text-lg'>Right answer : {rightAnswer}</h1>
             <h1 className='text-lg'>Wrong answer : {wrongAnswer}</h1>
