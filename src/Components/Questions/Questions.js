@@ -3,13 +3,13 @@ import './Questions.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapPin } from '@fortawesome/free-solid-svg-icons';
 import Options from '../Options/Options';
-import Toast from '../Toast/Toast';
+
 
 const Questions = ({MainQuestion, setRightAnswer,setWrongAnswer,wrongAnswer,rightAnswer}) => {
     const [answer, setAnswer]=useState('');
-    const [result, setResult]=useState('');
+  
     
-    const {id, correctAnswer, question, options}=MainQuestion;
+    const { correctAnswer, question, options}=MainQuestion;
 
     const currentAnswerHandler=()=>{
 
